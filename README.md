@@ -17,6 +17,8 @@ https://aisac-id.github.io/chizuru-world-tour/
 
 ## Teknis
 Static HTML + JS, tanpa server. Buka `index.html` langsung atau via GitHub Pages.
+
+
 ---
 
 ## Brand & Promotion Kit
