@@ -1,22 +1,25 @@
-# Chizuru World Tour
-
 <p align="center">
   <img src="promo/banner.png" alt="Chizuru World Tour banner" width="100%">
 </p>
 
+# Chizuru World Tour
 
-Visual novel pendek: jalan-jalan keliling dunia bareng Chizuru Mizuhara dalam 8 destinasi kostum adat.
+> Chizuru Mizuhara fan-art game (100 world traditional costumes)
 
-## Cara Main
-- Baca dialog, buat pilihan yang menaikkan/menurunkan affection.
-- 8 destinasi terbuka berurutan; affection menentukan ending (TRUE / GOOD / NORMAL).
-- Progres disimpan di browser (localStorage).
+## Tentang Chizuru World Tour
 
-## Mainkan
-https://aisac-id.github.io/chizuru-world-tour/
+Chizuru Mizuhara fan-art game (100 world traditional costumes)
 
-## Teknis
-Static HTML + JS, tanpa server. Buka `index.html` langsung atau via GitHub Pages.
+## Fitur yang Direncanakan
+
+- Gameplay langsung di browser
+- Level dan tantangan bertingkat
+- Skor dan papan peringkat
+- Hadiah dan koleksi
+
+## Teknologi
+
+`HTML`
 
 
 ---
