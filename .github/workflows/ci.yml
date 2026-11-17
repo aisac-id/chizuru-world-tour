@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install (lockfile frozen, tanpa install scripts)
+        run: npm ci --ignore-scripts
+      - name: Secret scan (nol hardcode)
+        run: node scripts/secret-scan.mjs
+      - name: Budget ukuran file (maks 300 LoC kode)
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            n=$(wc -l < "$f")
+            if [ "$n" -gt 300 ]; then echo "FAIL: $f = $n baris (>300)"; fail=1; fi
+          done < <(git ls-files '*.js' '*.mjs' '*.css')
+          exit "$fail"
+      - name: Install browser Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Test e2e
+        run: npx playwright test
