@@ -1,0 +1,19 @@
+# Env & secrets (nol hardcode)
+.env
+.env.*
+!.env.example
+
+# Dokumen internal Confidential — dilarang di repo
+Operation/
+
+# Tooling dev
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
